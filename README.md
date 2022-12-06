@@ -1,4 +1,4 @@
-# [public 4등/ 0.8409798] 유방암의 임파선 전이 예측 AI 경진대회 
+# [public 4등/ 0.8409] 유방암의 임파선 전이 예측 AI 경진대회 
 
 - 유방암의 임파선 전이 예측 AI 경진대회  : <a href="https://www.notion.so/wew1202/AI-6368467724394e8a956701057aa0e37a">![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
