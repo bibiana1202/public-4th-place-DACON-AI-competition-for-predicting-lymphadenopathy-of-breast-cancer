@@ -1,5 +1,8 @@
 # [public 4등/0.8409] 유방암의 임파선 전이 예측 AI 경진대회 
 
+<img width="763" alt="스크린샷 2022-12-06 오후 5 00 39" src="https://user-images.githubusercontent.com/105691874/205854231-db02a12e-e96a-4bd5-baf2-983945ebed31.png">
+
+
 - 유방암의 임파선 전이 예측 AI 경진대회  : <a href="https://www.notion.so/wew1202/AI-6368467724394e8a956701057aa0e37a">![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
 - 데이콘 - 유방암의 임파선 전이 예측 AI 경진대회 : <a href="https://dacon.io/competitions/official/236011/leaderboard">![dacon](https://img.shields.io/badge/-dacon-blue)  
