@@ -16,25 +16,11 @@
 
   - Google Colab, AWS, VSCode,Phycharm,Anaconda
   
-* ### purpose
-  - 폐와 관련된 14가지의 질병을 detecting하여 data augmentation에 따른 여러 model의 performance 비교
 ---
 ## 🔬 프로젝트 수행 절차 및 방법
-* ### Materials
-  
-  - Vietnam hospitals dataset (the Hospital 108 and the Hanoi Medical University Hospital)
-  - train images: 15,000 (normal: 10,606, patient: 4,394)
-  - test images: 3,000
-  - bbox info: image_id, class_id, x_min, y_min, x_max, y_max
-  - image resize: 512 x 512 , 1024 x 1024
-  - 병명 사전조사 : <a href="https://www.notion.so/wew1202/8204385788fd45c1adeb7c0c7dc5e4db">![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
-  
-* ### Methods
-  - Tools: OpenCV, PyTorch, numpy, pandas, sklearn, seaborn, matplotlib
-  - Augmentations: Rotation(random), Flip(horizontal), Zoomin(10%), Cutmix, CLAHE, Equlization
-  - Models: Faster RCNN, YOLOv5, RetinaNet, Yolof, Yolox, CenterNet
-  - Workflow : 
-  
+* ### 개발 과정
+<img width="600" alt="스크린샷 2022-12-06 오후 2 49 54" src="https://user-images.githubusercontent.com/105691874/205828484-18e6fb12-1c06-4da2-90dc-08deccede781.png">
+
   
   
 ---
