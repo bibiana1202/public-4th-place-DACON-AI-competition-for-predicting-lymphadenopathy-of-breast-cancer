@@ -19,7 +19,7 @@
 ---
 ## 🔬 프로젝트 수행 절차 및 방법
 * ### 개발 과정
-<img width="600" alt="스크린샷 2022-12-06 오후 2 49 54" src="https://user-images.githubusercontent.com/105691874/205828484-18e6fb12-1c06-4da2-90dc-08deccede781.png">
+    <img width="600" alt="스크린샷 2022-12-06 오후 2 49 54" src="https://user-images.githubusercontent.com/105691874/205828484-18e6fb12-1c06-4da2-90dc-08deccede781.png">
   
 ---
 ## 🔬 프로젝트 수행 결과
@@ -48,7 +48,7 @@
 * ### 데이터 전처리
     
     * #### Image Data 필터링
-      <img width="800" alt="스크린샷 2022-12-06 오후 3 03 20" src="https://user-images.githubusercontent.com/105691874/205832931-fdb597db-0f9a-4563-9cea-33d4887eb14c.png">
+      <img width="500" alt="스크린샷 2022-12-06 오후 3 03 20" src="https://user-images.githubusercontent.com/105691874/205832931-fdb597db-0f9a-4563-9cea-33d4887eb14c.png">
 
     * #### Image Data 증강
         * 원본 이미지 갯수 1000장
