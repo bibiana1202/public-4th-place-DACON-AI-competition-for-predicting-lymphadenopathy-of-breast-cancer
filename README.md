@@ -1,5 +1,5 @@
 [public 4등/ 0.8409798] 유방암의 임파선 전이 예측 AI 경진대회 
-https://dacon.io/competitions/official/236011/leaderboard
+  - link : https://dacon.io/competitions/official/236011/leaderboard
 
 1. 프로젝트 개요 
   1) 대회 소개
