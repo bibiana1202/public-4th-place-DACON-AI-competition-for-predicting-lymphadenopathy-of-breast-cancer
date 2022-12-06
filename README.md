@@ -10,7 +10,7 @@
   - 데이콘 경진대회 및 프로젝트 설명
   - 주제 : 유방암 병리 슬라이드 영상과 임상항목을 통한 유방암의 임파선 전이 여부 예측
   - 프로젝트 설명 : 유방암 병리 슬라이드 영상(image)와 임상 항목(Tabular)를 조합하여 유방암의 임파선 전이 여부 이진 분류
-  - 유의사항 : 유방암 병리 슬라이드 영상을 모델 학습과 추론에 필수로 사용해야 하며, 임상 항목 데이터만 활용하는 경우 수상 제회
+  - 유의사항 : 유방암 병리 슬라이드 영상을 모델 학습과 추론에 필수로 사용해야 하며, 임상 항목 데이터만 활용하는 경우 수상 제외
 
 * ### 개발 환경
 
@@ -25,22 +25,43 @@
   
 ---
 ## 🔬 프로젝트 수행 결과
-* ### EDA
-![https://user-images.githubusercontent.com/61971952/193209874-ebc78a59-5b58-4816-8412-c841a3b6099f.png](https://user-images.githubusercontent.com/61971952/193209874-ebc78a59-5b58-4816-8412-c841a3b6099f.png)
+* ### 데이터 분석
+    * #### 대회 제공 데이터: Train dataset 1000, Test dataset 250
+      <img width="300" alt="스크린샷 2022-12-06 오후 2 55 27" src="https://user-images.githubusercontent.com/105691874/205830106-a9d6eb9b-e5bd-4810-af7f-8f813c04dbb3.png">
     
-    - 정상인의 데이터를 삭제하고 적은 양의 환자 데이터만 남음
-    - 라벨 간의 극단적인 양 차이 -> 데이터 불균형
-    - 단일 이미지안에 다중 라벨
+    * #### Image Data 분석
+      <img width="300" alt="스크린샷 2022-12-06 오후 3 00 22" src="https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png">
+        
+        * 병리 슬라이드 이미지 파일 (png)
+        * 1500 ~ 7300px 크기의 고해상도 이미지
+        * 각 데이터마다 종횡비가 상이
+        * 노이즈 데이터 존재
+
+    * #### Tabular Data 분석
+        <img width="300" alt="스크린샷 2022-12-06 오후 3 02 30" src="https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png">
+
+        * 환자 정보 테이블 파일(csv)
+        * 나이, 진단명, 암의 개수 등 학습에 필요한 23가지의 항목 존재
+        * 많은 양의 결측치 발견
+
+
     
-* ### Augmentation에 따른 dataset 종류
+* ### 데이터 전처리
 
     - category A: no augmentation (15000장)
     - category B: rotation, flip, zoomin (15000장 + 6250장)
     - categroy C: rotation, flip, zoomin(10%), CLAHE, equalization (15000장 + 6250장)
 
 
-* ### Model에 따른 성능 비교(kaggle score)
+* ### 모델 선정
+* ### 모델 평가 및 개선
 
+    
+    
+    
+    
+    
+    
 M/D	| 512 A | 512 B | 512 C | 1024A | 1024B | 1024C |
 --------------|-------|-------|-------|-------|-------|-------|
 Faster R-CNN | 0.013/0.016 | 0.135/0.124 | --- | 0.131/0.110 | 0.137/0.127 | 0.123/0.154 |
