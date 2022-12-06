@@ -2,7 +2,7 @@
 
 - 유방암의 임파선 전이 예측 AI 경진대회  : <a href="https://www.notion.so/wew1202/AI-6368467724394e8a956701057aa0e37a">![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
-- 데이콘 - 유방암의 임파선 전이 예측 AI 경진대회 : <a href="https://dacon.io/competitions/official/236011/leaderboard">![dacone](https://img.shields.io/badge/-dacone-blue)  
+- 데이콘 - 유방암의 임파선 전이 예측 AI 경진대회 : <a href="https://dacon.io/competitions/official/236011/leaderboard">![dacon](https://img.shields.io/badge/-dacon-blue)  
     
 ---
 ## 🔬 프로젝트 개요
