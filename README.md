@@ -1,4 +1,4 @@
-# [public 4등/ 0.8409] 유방암의 임파선 전이 예측 AI 경진대회 
+# [public 4등/0.8409] 유방암의 임파선 전이 예측 AI 경진대회 
 
 - 유방암의 임파선 전이 예측 AI 경진대회  : <a href="https://www.notion.so/wew1202/AI-6368467724394e8a956701057aa0e37a">![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
@@ -20,14 +20,14 @@
 ## 🔬 프로젝트 수행 절차 및 방법
 * ### 개발 과정
 <img width="600" alt="스크린샷 2022-12-06 오후 2 49 54" src="https://user-images.githubusercontent.com/105691874/205828484-18e6fb12-1c06-4da2-90dc-08deccede781.png">
-
-  
   
 ---
 ## 🔬 프로젝트 수행 결과
 * ### 데이터 분석
-    * #### 대회 제공 데이터: Train dataset 1000, Test dataset 250
+    * #### 대회 제공 데이터
       <img width="300" alt="스크린샷 2022-12-06 오후 2 55 27" src="https://user-images.githubusercontent.com/105691874/205830106-a9d6eb9b-e5bd-4810-af7f-8f813c04dbb3.png">
+        
+        * Train dataset 1000, Test dataset 250
     
     * #### Image Data 분석
       <img width="300" alt="스크린샷 2022-12-06 오후 3 00 22" src="https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png">
@@ -44,15 +44,30 @@
         * 나이, 진단명, 암의 개수 등 학습에 필요한 23가지의 항목 존재
         * 많은 양의 결측치 발견
 
-
     
 * ### 데이터 전처리
+    
+    * #### Image Data 필터링
+      <img width="1035" alt="스크린샷 2022-12-06 오후 3 03 20" src="https://user-images.githubusercontent.com/105691874/205832931-fdb597db-0f9a-4563-9cea-33d4887eb14c.png">
 
-    - category A: no augmentation (15000장)
-    - category B: rotation, flip, zoomin (15000장 + 6250장)
-    - categroy C: rotation, flip, zoomin(10%), CLAHE, equalization (15000장 + 6250장)
+    * #### Image Data 증강
+        * 원본 이미지 갯수 1000장
 
-
+M/D	| flip | rotate | zoomin | equalization | CLAHE | centercrop |증강 이미지 갯수| score |
+--------------|-------|-------|-------|-------|-------|-------|-------|-------|
+category A | --- | --- | --- | --- | --- | --- | 0 | 0.7067 |
+category B-1 | Horizontalflip | shiftscalerotate | --- | --- | --- | --- | 1000 | 0.6829459108 |
+categroy C-1 | Horizontalflip | shiftscalerotate | --- | eaualization | --- | --- | 1000 | 0.6933083453 |
+categroy D-1 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 1000 | 0.7490981241 |
+categroy D-2 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 2000 | 0.7681871552 |
+categroy D-3 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 3000 | 0.6846697012 |
+categroy E-2 | Horizontalflip | shiftscalerotate | zoomin(20%) | --- | CLAHE | gamma | 2000 | 0.7535557 |
+Padding_512_resize | --- | --- | --- | --- | --- |  | 0 | 0.6738 |
+Gamma | --- | --- | --- | --- | --- | --- | 1000 | 0.6456 |
+Zoom | --- | --- | --- | --- | --- | --- | 1000 | 0.6555 |
+        
+        
+        
 * ### 모델 선정
 * ### 모델 평가 및 개선
 
