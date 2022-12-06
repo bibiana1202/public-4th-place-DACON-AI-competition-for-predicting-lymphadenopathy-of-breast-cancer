@@ -30,7 +30,7 @@
         * Train dataset 1000, Test dataset 250
     
     * #### Image Data 분석
-      <img width="300" alt="스크린샷 2022-12-06 오후 3 00 22" src="https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png">
+      <img width="500" alt="스크린샷 2022-12-06 오후 3 00 22" src="https://user-images.githubusercontent.com/105691874/205831855-e1ea26f8-aff9-4fe8-8b3f-7b543f1c8602.png">
         
         * 병리 슬라이드 이미지 파일 (png)
         * 1500 ~ 7300px 크기의 고해상도 이미지
@@ -38,7 +38,7 @@
         * 노이즈 데이터 존재
 
     * #### Tabular Data 분석
-        <img width="300" alt="스크린샷 2022-12-06 오후 3 02 30" src="https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png">
+        <img width="700" alt="스크린샷 2022-12-06 오후 3 02 30" src="https://user-images.githubusercontent.com/105691874/205832630-6847b290-9f71-47bf-b984-fbfcb153aaa4.png">
 
         * 환자 정보 테이블 파일(csv)
         * 나이, 진단명, 암의 개수 등 학습에 필요한 23가지의 항목 존재
@@ -48,32 +48,96 @@
 * ### 데이터 전처리
     
     * #### Image Data 필터링
-      <img width="1035" alt="스크린샷 2022-12-06 오후 3 03 20" src="https://user-images.githubusercontent.com/105691874/205832931-fdb597db-0f9a-4563-9cea-33d4887eb14c.png">
+      <img width="800" alt="스크린샷 2022-12-06 오후 3 03 20" src="https://user-images.githubusercontent.com/105691874/205832931-fdb597db-0f9a-4563-9cea-33d4887eb14c.png">
 
     * #### Image Data 증강
         * 원본 이미지 갯수 1000장
+            M/D	| flip | rotate | zoomin | equalization | CLAHE | centercrop |증강 갯수| score |
+            --------------|-------|-------|-------|-------|-------|-------|-------|-------|
+            category A | --- | --- | --- | --- | --- | --- | 0 | 0.7067 |
+            category B-1 | Horizontalflip | shiftscalerotate | --- | --- | --- | --- | 1000 | 0.6829459108 |
+            categroy C-1 | Horizontalflip | shiftscalerotate | --- | eaualization | --- | --- | 1000 | 0.6933083453 |
+            categroy D-1 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 1000 | 0.7490981241 |
+            categroy D-2 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 2000 | 0.7681871552 |
+            categroy D-3 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 3000 | 0.6846697012 |
+            categroy E-2 | Horizontalflip | shiftscalerotate | zoomin(20%) | --- | CLAHE | gamma | 2000 | 0.7535557 |
+            Padding_512_resize | --- | --- | --- | --- | --- |  | 0 | 0.6738 |
+            Gamma | --- | --- | --- | --- | --- | --- | 1000 | 0.6456 |
+            Zoom | --- | --- | --- | --- | --- | --- | 1000 | 0.6555 |
 
-M/D	| flip | rotate | zoomin | equalization | CLAHE | centercrop |증강 이미지 갯수| score |
---------------|-------|-------|-------|-------|-------|-------|-------|-------|
-category A | --- | --- | --- | --- | --- | --- | 0 | 0.7067 |
-category B-1 | Horizontalflip | shiftscalerotate | --- | --- | --- | --- | 1000 | 0.6829459108 |
-categroy C-1 | Horizontalflip | shiftscalerotate | --- | eaualization | --- | --- | 1000 | 0.6933083453 |
-categroy D-1 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 1000 | 0.7490981241 |
-categroy D-2 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 2000 | 0.7681871552 |
-categroy D-3 | Horizontalflip | shiftscalerotate | zoomin(10%) | eaualization | CLAHE | centercrop | 3000 | 0.6846697012 |
-categroy E-2 | Horizontalflip | shiftscalerotate | zoomin(20%) | --- | CLAHE | gamma | 2000 | 0.7535557 |
-Padding_512_resize | --- | --- | --- | --- | --- |  | 0 | 0.6738 |
-Gamma | --- | --- | --- | --- | --- | --- | 1000 | 0.6456 |
-Zoom | --- | --- | --- | --- | --- | --- | 1000 | 0.6555 |
-        
     * #### Tabular Data
-       <img width="886" alt="스크린샷 2022-12-06 오후 3 56 39" src="https://user-images.githubusercontent.com/105691874/205842526-6799108e-4706-490a-9fe5-27b318ba9719.png">
         * Tabular 항목 : 범주형 항목 17개 , 수치형 항목 6개
         * 결측치 존재 : 범주형 결측치 항목 13개 , 수치형 결측치 항목 5개
+            <img width="800" alt="스크린샷 2022-12-06 오후 4 01 53" src="https://user-images.githubusercontent.com/105691874/205843373-3b2316c1-5153-41f8-9748-5766fac2f02e.png">
         * utlier(이상치) 존재  : PR_Allred_score(범주형)  : 0~8 범주를 벗어나는 데이터 존재
+
     
-        
+    
 * ### 모델 선정
+    * #### 선별 데이터
+        * Image Data
+            * MIL : 원본 해상도 유지
+                <img width="615" alt="스크린샷 2022-12-06 오후 4 07 32" src="https://user-images.githubusercontent.com/105691874/205844366-5795ba6b-6643-48aa-bcc2-948aadeea8f5.png">
+                * 패치 개수 조절 (200개) => 성능 저조
+                * 모든 패치 사용 => 자원부족 , 학습불가
+            * Resize : 1024,512,256,224 (동일모델)
+                * 1024 Resnext50 F1-score 0.7575
+                * 512 Resnext50 F1-score 0.7716
+                * 256 Resnext50 F1-score 0.6812
+                * 224 Coatnet_1_rw_224 F1-score 0.7215
+        * Tabular Data
+            * 결측치 채우는 방식
+            * 종속변수와 독립변수 간의 상관관계에 따른 Feature Selection
+    
+    * #### Single Tabular Model
+        <img width="500" alt="스크린샷 2022-12-06 오후 4 10 17" src="https://user-images.githubusercontent.com/105691874/205844845-da44484e-f8ee-413c-ace1-27300781c708.png">
+        
+        * Model Selection
+            * AutoMl
+            * Bayesian optimization
+        * Feature selection(Correlation)
+            * 카이제곱 상관성(범주형)
+            * 피어슨 상관계수(수치형)
+        * Tabular Classifier 
+            * Gradient Boosting
+            * Cat Boosting Classifier
+
+
+    * #### Single Image Model
+        <img width="500" alt="스크린샷 2022-12-06 오후 4 15 53" src="https://user-images.githubusercontent.com/105691874/205845837-85e0bb71-de8d-4489-8bb1-78fd548e83f2.png">
+
+       * 사용 라이브러리
+            * MMclassfication
+            * Timm
+    
+       * Image Classifier
+            * ResNext50_32x4d
+            * Res2Net-50
+            * Mobilenet_v2
+            * Densenet-169
+            * CoatNet-1
+            * EfficientNet-b0
+
+
+    * #### Multi-Modal Model
+        <img width="1000" alt="스크린샷 2022-12-06 오후 4 23 23" src="https://user-images.githubusercontent.com/105691874/205847184-6dc939da-8c07-4ede-a3be-b522d04ef72b.png">
+-78fd548e83f2.png">
+
+        * Tabular Feature Extractor
+            * Sequential model(MLP)
+            * TabNet Encoder
+        * Image Feature Extractor
+            * ResNext
+            * EfficientNet
+            * SqueezeNet
+            * VGG
+            * AlexNet
+            * CoatNet
+            * ResNet
+            * DenseNet
+    
+    
+    
 * ### 모델 평가 및 개선
 
     
