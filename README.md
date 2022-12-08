@@ -187,10 +187,14 @@
     
     * #### Ensemble : <a href="https://docs.google.com/spreadsheets/d/1tWmCUIzbLK0ckttNemSRQAWZSfiE-5oJLLXwG8iRwac/edit#gid=0">![EXCEL](https://img.shields.io/badge/-EXCEL-green)  
 
-        * Hard Voting (0.8326277762)
-            * [1] Ensemble(AdaBoost + Catboost + XGBoost + MMC_resnext  + 20번)
+        * high score 4 (0.8409710181)
+            * [1] high score 2(0.83)+ MMC_resnext + (M_0.7535557)resnext50_E2_20e_binary + AdaBoost + Ridgeclassfier
+            * [2] #20 + CatBoost + [1]
+    
+        * high score 2 (0.8326277762)
+            * [1] Ensemble(AdaBoost + Catboost + XGBoost + MMC_resnext  + 앙20#)
             * [2] Ensemble(tabular_GradientBoost + AdaBoost + [1])
-            * [3] Ensemble (17번 + MMC_resnext + [2])
+            * [3] Ensemble (앙17# + MMC_resnext + [2])
             
         * 앙상블 17번 (0.8157543391) = 앙5# +앙6# + 앙13# + 앙14# + 앙15# + 앙16#
             * 앙상블 5번 (0.7977893511) = pred#9(0.7994386703) + tabular_3_0.816793893129771(0.8167) + pred#15(0.7067)
