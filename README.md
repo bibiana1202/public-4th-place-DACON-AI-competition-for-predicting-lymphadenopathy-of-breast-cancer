@@ -88,6 +88,7 @@
     * #### 선별 데이터
         * Image Data    
             * MIL : 원본 해상도 유지
+                
                 <img width="615" alt="스크린샷 2022-12-06 오후 4 07 32" src="https://user-images.githubusercontent.com/105691874/205844366-5795ba6b-6643-48aa-bcc2-948aadeea8f5.png">
                 * 패치 개수 조절 (200개) => 성능 저조
                 * 모든 패치 사용 => 자원부족 , 학습불가
