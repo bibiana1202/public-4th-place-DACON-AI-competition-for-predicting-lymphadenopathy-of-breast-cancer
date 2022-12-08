@@ -53,7 +53,8 @@
     * #### Image Data 필터링
       <img width="500" alt="스크린샷 2022-12-06 오후 3 03 20" src="https://user-images.githubusercontent.com/105691874/205832931-fdb597db-0f9a-4563-9cea-33d4887eb14c.png">
 
-    * #### Image Data 증강
+    * #### Image Data 증강 : <a href="https://docs.google.com/spreadsheets/d/1TYMVaDAlyu5X-v9ZCodokFLaaDzuRrNjLoaMPMOnTSE/edit#gid=0">![EXCEL](https://img.shields.io/badge/-EXCEL-green)  
+
         * 원본 이미지 갯수 1000장
             M/D	| flip | rotate | zoomin | equalization | CLAHE | centercrop |증강 갯수| score |
             --------------|-------|-------|-------|-------|-------|-------|-------|-------|
