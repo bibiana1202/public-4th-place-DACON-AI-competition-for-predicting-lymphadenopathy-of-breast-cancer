@@ -104,7 +104,7 @@
         <img width="500" alt="스크린샷 2022-12-06 오후 4 10 17" src="https://user-images.githubusercontent.com/105691874/205844845-da44484e-f8ee-413c-ace1-27300781c708.png">
         
         * Model Selection
-            * AutoMl
+            * AutoML
             * Bayesian optimization
         * Feature selection(Correlation)
             * 카이제곱 상관성(범주형)
