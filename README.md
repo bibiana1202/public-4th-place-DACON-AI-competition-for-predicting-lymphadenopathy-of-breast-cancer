@@ -140,14 +140,60 @@
     
     
     
-* ### 모델 평가 및 개선
+* ### 모델 평가 및 개선 : <a href="https://docs.google.com/spreadsheets/d/127NGPFhW_sOfHffROYjIONv1kPIGLyZN74Zu64_nzDk/edit#gid=2061805860">![EXCEL](https://img.shields.io/badge/-EXCEL-green)  
     
     * #### Single Tabular Model
-    * #### Single Image Model 
-    * #### Multi-Modal Model
-    * #### Ensemble
-
     
+        Model|F1- Score
+        -------|-------|
+        XGBoost|0.8000000000000002|
+        CatBoost|0.8113207547169812|
+        AdaBoost|0.8000000000000002|
+        Ridge|0.7735849056603773|
+
+    * #### Single Image Model : <a href="https://docs.google.com/spreadsheets/d/1fLho9xu-qGD4FQPmGHMIS650to86aCSxDNjJkuFz044/edit#gid=0">![EXCEL](https://img.shields.io/badge/-EXCEL-green)  
+    
+    
+        Model|F1- Score
+        -------|-------|
+        resnext50|0.7067|
+        cspresnext50|0.7612396694|
+        ghostnet_100|0.75613487|
+        mobilenetv3_rw|0.748808652|
+        ssl_resnext50_32x4d|0.748734329|
+        rexnet_150|0.7414935362|
+        tinynet_b|0.7414418|
+        ecaresnext50t_32x4d|0.7109136911|
+        edgenext_base|0.70936788|
+        efficientnetv2_rw_m|0.697245416|
+
+    * #### Multi-Modal Model : <a href="https://docs.google.com/spreadsheets/d/1O9QuRCk46nilIeahO8paoYhJG1HvMMePanEKc9aAru0/edit#gid=0">![EXCEL](https://img.shields.io/badge/-EXCEL-green)  
+    
+    
+        Model|F1- Score
+        -------|-------|
+        resnext50|0.7994|
+        densenet169|0.7768|
+        resnet18_40|0.7546|
+        vgg16|0.7502|
+    
+    * #### Ensemble : <a href="https://docs.google.com/spreadsheets/d/1tWmCUIzbLK0ckttNemSRQAWZSfiE-5oJLLXwG8iRwac/edit#gid=0">![EXCEL](https://img.shields.io/badge/-EXCEL-green)  
+
+        * Hard Voting (0.8326277762)
+            * [1] Ensemble(AdaBoost + Catboost + XGBoost + MMC_resnext  + 20번)
+            * [2] Ensemble(tabular_GradientBoost + AdaBoost + [1])
+            * [3] Ensemble (17번 + MMC_resnext + [2])
+            
+        * 앙상블 17번 (0.8157543391) = 앙5# +앙6# + 앙13# + 앙14# + 앙15# + 앙16#
+            * 앙상블 5번 (0.7977893511) = pred#9(0.7994386703) + tabular_3_0.816793893129771(0.8167) + pred#15(0.7067)
+            * 앙상블 6번 (0.7986071899) = pred#7(0.7865034694) + pred#9(0.7994386703) + pred#12(0.77071428)
+            * 앙상블 13번 (0.7902708482) = pred#7(0.7865034694) + pred#9(0.7994386703) + submission_catboost_train(0.8128)
+            * 앙상블 14번 (0.8067434067) = pred#39(0.7472) + pred#12(0.77071428) + pred#9(0.7994386703) + 	앙5#	0.790270842 + tabular_XGBoost_submission(0.8205) + pred#15(0.7067)
+            * 앙상블 15번 (0.8108412585) = pred#5(0.7716) + 앙14#(0.8067434067) +pred#15(0.7067)
+            * 앙상블 16번 (0.77) = vgg(0.75027) + pred#4(0.7575) + efficientnet_b230(0.736)	+ pred#5(0.7716) + resnet18_40(0.754)
+          
+        * 앙상블 20번(0.8157543391) = pred#39(0.7472) + pred#12(0.77071428)	+ 앙5#(0.7977893511) + pred#9	(0.7994386703) + 앙6# (0.7986071899)
+            
 ---
 ## 🔬 자체 의견 평가
  - Medical trend인 object detection 을 공부하기 위하여 선택한 프로젝트
