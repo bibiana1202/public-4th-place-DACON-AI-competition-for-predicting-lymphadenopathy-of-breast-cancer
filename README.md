@@ -22,8 +22,15 @@
 ---
 ## 🔬 프로젝트 수행 절차 및 방법
 * ### 개발 과정
-    <img width="600" alt="스크린샷 2022-12-06 오후 2 49 54" src="https://user-images.githubusercontent.com/105691874/205828484-18e6fb12-1c06-4da2-90dc-08deccede781.png">
-  
+    * 데이터 전처리
+        * Tabular 데이터 : 결측치 제거
+        * Image 데이터 : 이미지 노이즈 제거, 이미지 사이즈 조절
+    * 모델 선정 및 분석
+        * Multi-modal
+        * Tabular model
+        * Image model
+    * 예측치 출력 방식
+        * Ensemble model : hard voting, soft voting
 ---
 ## 🔬 프로젝트 수행 결과
 * ### 데이터 분석
