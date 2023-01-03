@@ -167,15 +167,6 @@
         Model|F1- Score
         -------|-------|
         resnext50|0.7067|
-        cspresnext50|0.7612396694|
-        ghostnet_100|0.75613487|
-        mobilenetv3_rw|0.748808652|
-        ssl_resnext50_32x4d|0.748734329|
-        rexnet_150|0.7414935362|
-        tinynet_b|0.7414418|
-        ecaresnext50t_32x4d|0.7109136911|
-        edgenext_base|0.70936788|
-        efficientnetv2_rw_m|0.697245416|
 
     * #### Multi-Modal Model : <a href="https://docs.google.com/spreadsheets/d/1O9QuRCk46nilIeahO8paoYhJG1HvMMePanEKc9aAru0/edit#gid=0">![EXCEL](https://img.shields.io/badge/-EXCEL-green)  
     
@@ -186,6 +177,16 @@
         densenet169|0.7768|
         resnet18_40|0.7546|
         vgg16|0.7502|
+        cspresnext50|0.7612396694|
+        ghostnet_100|0.75613487|
+        mobilenetv3_rw|0.748808652|
+        ssl_resnext50_32x4d|0.748734329|
+        rexnet_150|0.7414935362|
+        tinynet_b|0.7414418|
+        ecaresnext50t_32x4d|0.7109136911|
+        edgenext_base|0.70936788|
+        efficientnetv2_rw_m|0.697245416|
+
     
     * #### Ensemble : <a href="https://docs.google.com/spreadsheets/d/1tWmCUIzbLK0ckttNemSRQAWZSfiE-5oJLLXwG8iRwac/edit#gid=0">![EXCEL](https://img.shields.io/badge/-EXCEL-green)  
 
